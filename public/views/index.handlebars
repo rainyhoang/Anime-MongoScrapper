@@ -6,7 +6,8 @@
     </div>
 
     {{!--News Cards--}} {{!--Iterate through the results and populate the handlebars injection points with the scraped titles,
-    links, and article snippets.--}} {{#each result}}
+    links, and article snippets.--}} 
+    {{#each result}}
     <div class="card news-section">
         <a href="{{this.link}}">
             <h4 class="card-header">{{this.title}}</h4>

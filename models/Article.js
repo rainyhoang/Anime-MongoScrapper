@@ -11,9 +11,9 @@ var ArticleSchema = new Schema({
   },
 
   articleSnippet: {
-    type: String.
+    type: String,
     required: true,
-  }
+  },
   
   comment: {
     type: Schema.Types.ObjectId,

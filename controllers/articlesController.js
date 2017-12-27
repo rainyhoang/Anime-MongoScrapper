@@ -5,8 +5,8 @@ var Article = require("../models/Article.js");
 
 module.exports = function (app) {
 	app.get("/", function(req, res){
-		// res.redirect('/articles')
-		res.render("index")
+		res.redirect('/articles')
+		// res.render("index")
 		console.log("Render index")
 	});
 //*************ROUTING FOR SCRAPING HTML****************
@@ -35,9 +35,10 @@ module.exports = function (app) {
 					});
 				}
 			});
+		res.redirect("/")
 		}
 	});
-	res.redirect("/")
+	// res.redirect("/")
 
 //*************Scrape from MongoDB***********************
 	app.get('/articles', function(req, res) {
