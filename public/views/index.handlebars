@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="jumboheader">Anime scrapper</h1>
+        <p class="lead">All news about Anime</p>
+        <p><a class="btn btn-lg btn-success" href="/scrape" role="button">Fetch the latest !</a></p>
+    </div>
+
+    {{!--News Cards--}} {{!--Iterate through the results and populate the handlebars injection points with the scraped titles,
+    links, and article snippets.--}} {{#each result}}
+    <div class="card news-section">
+        <a href="{{this.link}}">
+            <h4 class="card-header">{{this.title}}</h4>
+        </a>
+        <div class="card-block">
+   
+            <a href="{{this.link}}">
+                <p class="card-text">{{this.articleSnippet}}</p>
+            </a>
+            <br>
+            <a href="/articles/{{this._id}}" class="btn btn-primary">Comment</a>
+        </div>
+    </div>
+    <br>
+    <br> {{/each}}
+
+
+
+    <footer class="footer">
+        <p>&copy; Rain 2017</p>
+    </footer>
+
+</div>
+<!-- /container -->
