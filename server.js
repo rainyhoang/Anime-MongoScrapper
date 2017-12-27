@@ -43,5 +43,5 @@ db.once("open", function () {
 
 //Listen on PORT 8000 & notify us.
 app.listen(PORT, function () {
-  console.log("App running on port 8 THOUSAND!!!!!!!!");
+  console.log("App running on port 8000!!!!!!!!");
 });

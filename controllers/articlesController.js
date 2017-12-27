@@ -3,16 +3,17 @@ var cheerio = require("cheerio");
 var Comment = require("../models/Comment.js");
 var Article = require("../models/Article.js");
 
-module.experts = function (app) {
+module.exports = function (app) {
 	app.get("/", function(req, res){
 		// res.redirect('/articles')
 		res.render("index")
+		console.log("Render index")
 	});
 //*************ROUTING FOR SCRAPING HTML****************
 	app.get("/scrape", function (res, res){
 		request("https://otakumode.com/news"), function (error, response, html) {
 			var $ = cheerio.load(html);
-			$("p-article-list__body").each(function(i, element){
+			$(".p-article__title").each(function(i, element){
 				var title = $(this)
 					.children ("h3")
 					.children("a")
@@ -29,11 +30,8 @@ module.experts = function (app) {
 					result.link = link;
 
 					Article.create(result, function(err, doc){
-						if(err){
-							console.log(err)
-						}else {
-							console.log(doc);
-						}
+						if(err){console.log(err);}
+						else {console.log(doc);}
 					});
 				}
 			});
