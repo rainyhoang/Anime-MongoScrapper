@@ -1,10 +1,10 @@
 {
-  "name": "anime-favourite",
+  "name": "anime-news",
   "version": "1.0.0",
-  "description": "All most news about anime",
-  "main": "index.js",
+  "description": "Mongo News Scaper is web application that scrapes news from Petapixel's photography web site. I made the app with mongoose and Cheerio technologies among other ancillary technologies.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -13,18 +13,17 @@
   "author": "Rain",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rainyhoang/Anime-MongoScrapper/issues"
+    "url": "https://github.com/hadicodes/mongo-news-scraper/issues"
   },
-  "homepage": "https://github.com/rainyhoang/Anime-MongoScrapper#readme",
+  "homepage": "https://github.com/hadicodes/mongo-news-scraper#readme",
   "dependencies": {
-    "axios": "^0.17.1",
-    "body-parser": "^1.18.2",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.2",
+    "body-parser": "^1.16.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
-    "logger": "0.0.1",
-    "mongoose": "^4.13.7",
-    "morgan": "^1.9.0",
-    "request": "^2.83.0"
-  }
+    "mongoose": "^4.8.4",
+    "morgan": "^1.8.1",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {}
 }
